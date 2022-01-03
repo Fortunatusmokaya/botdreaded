@@ -80,8 +80,8 @@ export default class Command extends BaseCommand {
 					})();
 					return {
 						categories,
-						pack: pack[1] || "🌟 Here you go ",
-						author: pack[2] || "Chitoge 🌟",
+						pack: pack[1] || "🌟 Created by ",
+						author: pack[2] || "Dreaded 🌟",
 						quality,
 						type: StickerTypes[
 							parsedArgs.flags.includes("--crop") ||
@@ -98,7 +98,7 @@ export default class Command extends BaseCommand {
 					(flag) => (parsedArgs.joined = parsedArgs.joined.replace(flag, ""))
 				);
 				if (!buffer)
-					return void M.reply(`You didn't provide any Image/Video to convert`);
+					return void M.reply(`So I will make stickers from nowhere? Provide Image to convert mf`);
 				const sticker = await new Sticker(buffer, getOptions())
 					.build()
 					.catch(() => null);
