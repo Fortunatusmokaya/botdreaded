@@ -7,7 +7,7 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             adminOnly: true,
-            aliases: ['boom', 'bye'],
+            aliases: ['boom', 'bye', 'k', 'go'],
             command: 'remove',
             description: 'removes the mentioned users',
             category: 'moderation',
@@ -30,7 +30,7 @@ export default class Command extends BaseCommand {
             }
             // check if user is Bot
             else if (this.client.user.jid === user) {
-                text += `✖ Skipped *@${user.split('@')[0]}* as they're me.\n`
+                text += `How could that be 😂😂? I will skip *@${user.split('@')[0]}* as they're me. I will not remove myself.\n`
             } else {
                 text += `🟥 Removed *@${user.split('@')[0]}*\n`
                 await this.client.groupRemove(M.from, [user])
