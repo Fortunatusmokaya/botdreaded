@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
     // static count = 0
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
         
-        if (!joined) return void M.reply('Provide the keywords you wanna search, Baka!')
+        if (!joined) return void M.reply('Provide the keywords you wanna search, 😒!')
         const cara = joined.trim()
         console.log(cara)
         
@@ -33,7 +33,7 @@ const b = `${data.results?.[Math.floor(Math.random() * data.results.length)]?.me
 
         const sticker: any = await new Sticker(b, {
 			pack: "sticker",
-			author: "BY cara",
+			author: "BY dreaded",
 			quality: 90,
 			type: "crop",
 			categories: ["🎊"],
