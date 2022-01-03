@@ -36,7 +36,7 @@ export default class Command extends BaseCommand {
 			return void (await M.reply(
 				`${
 					M.groupMetadata?.subject || "*EVERYONE*"
-				}\n*READ QUOTED MESSAGE*\n*[TAGGED MAGICALLY]*`,
+				}\n*READ QUOTED MESSAGE*\n*[TAGS HIDDEN😎]*`,
 				undefined,
 				undefined,
 				M.groupMetadata?.participants.map((user) => user.jid)
@@ -49,7 +49,7 @@ export default class Command extends BaseCommand {
 			return void (await M.reply(
 				`${
 					M.groupMetadata?.subject || "*EVERYONE*"
-				}\n*READ QUOTED MESSAGE*\n*[TAGGED MAGICALLY]*`,
+				}\n*READ QUOTED MESSAGE*\n*[TAGS HIDDEN]*`,
 				undefined,
 				undefined,
 				M.groupMetadata?.participants.map((user) => user.jid)
@@ -59,7 +59,7 @@ export default class Command extends BaseCommand {
 			));
 		const sticker: any = await new Sticker(random, {
 			pack: "READ QUOTED MESSAGE",
-			author: "🌟 Chitoge 🌟",
+			author: "🌟 Dreaded 🌟",
 			quality: 90,
 			type: "full",
 			categories: ["🎊"],
