@@ -23,10 +23,10 @@ export default class Command extends BaseCommand {
         M.mentioned.forEach(async (user) => {
             const usr = this.client.contacts[user]
             const username = usr.notify || usr.vname || usr.name || user.split('@')[0]
-            if (!M.groupMetadata?.admins?.includes(user)) M.reply(`✖ Skipped *${username}* as they're not an admin`)
+            if (!M.groupMetadata?.admins?.includes(user)) M.reply(`Drugs at such a young age? I have Skipped *${username}* as they're not an admin`)
             else if (user !== this.client.user.jid) {
                 await this.client.groupDemoteAdmin(M.from, [user])
-                M.reply(` *${username}* is now a normal member 😂, so sad`)
+                M.reply(` *${username}* is now a member 😂, so sad`)
             }
         })
     }
