@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
         if (!Object.values(toggleableGroupActions).includes(type))
             return void M.reply(`🟥 Invalid Option: *${this.client.util.capitalize(type)}*`)
         const data = await this.client.getGroupData(M.from)
-        if (data[type]) return void M.reply(`🟨 *${this.client.util.capitalize(type)}* is already *activated, Baka!*`)
+        if (data[type]) return void M.reply(`🟨 *${this.client.util.capitalize(type)}* is already *activated, Brains Sir👆🏿!*`)
         await this.client.DB.group.updateOne({ jid: M.from }, { $set: { [type]: true } })
         return void M.reply(`🟩 *${this.client.util.capitalize(type)}* is now active`)
     }
