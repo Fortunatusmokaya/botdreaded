@@ -10,9 +10,9 @@ import { MessageType } from '@adiwajshing/baileys'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'cara',
-            description: `Get cara's repo`,
-            aliases: ['cara'],
+            command: 'fortunne',
+            description: `My owner view`,
+            aliases: ['mokaya'],
             category: 'general',
             usage: `${client.config.prefix}cara`,
             baseXp: 50
@@ -25,7 +25,7 @@ export default class Command extends BaseCommand {
         MessageType.image,
                     undefined,
                     undefined,
-                    `*Cara*: *https://github.com/iamherok/Cara_public*\n *If you like the bot please star my repo*`,
+                    `*Fortunne*: *Still a learner venturing into computer languages, upcoming doctor and nurse as well 💕*\n *Antisocial Sociopath, introvert maybe as well*`,
                     undefined
                 ).catch((reason: any) =>
             M.reply(`✖ An error occurred. Please try again later.`))
