@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
 		M: ISimplifiedMessage,
 		{ joined }: IParsedArgs
 	): Promise<void> => {
-		if (!joined) return void M.reply("Provide a query, Baka!");
+		if (!joined) return void M.reply("You have not provided me a query!");
 		const query = joined.trim();
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const results = await wiki.summary(query);
