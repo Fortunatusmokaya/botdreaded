@@ -7,16 +7,16 @@ import axios from 'axios'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'tada',
+            command: 'bot',
             description: 'Chat with bot.',
-            aliases: ['tada'],
+            aliases: ['bot'],
             category: 'fun',
             usage: `${client.config.prefix}tada [city or state name]`
         })
     }
 
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        if (!joined) return void M.reply(' *Baka!* ')
+        if (!joined) return void M.reply(' *Fuck you* ')
         const chitoge = joined.trim()
         await axios.get(`https://api.simsimi.net/v2/?text=${chitoge}&lc=en`)
         .then((response) => {
@@ -24,7 +24,7 @@ export default class Command extends BaseCommand {
                 const text = `🎍 *Bot*:  ${response.data.success}`
                 M.reply(text);
             }).catch(err => {
-                M.reply(` *Baka!* `)
+                M.reply(` *Uuuh* `)
             }
             )
     };
