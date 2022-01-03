@@ -32,7 +32,7 @@ export default class Command extends BaseCommand {
 		try {
 			pfp = await this.client.getProfilePicture(user);
 		} catch (err) {
-			M.reply(`Profile Picture not Accessible of ${username}`);
+			M.reply(`${username} has hidded the profile picture, literally an ugly creature`);
 			pfp =
 				"https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg";
 		}
@@ -117,7 +117,7 @@ export default class Command extends BaseCommand {
 			.setDiscriminator("0001")
 			.setBackground("COLOR", "#ffffff");
 		rank.build({}).then((rankcard) => {
-			const text = `🏮 *Username: ${username}*\n\n〽️ *Level: ${level}*\n\n⭐ *Exp: ${
+			const text = `❄ *Username: ${username}*\n\n〽️ *Level: ${level}*\n\n⭐ *Exp: ${
 				exp || 0
 			} / ${required}*\n\n💫 *Role: ${role}*\n\n`;
 			M.reply(
