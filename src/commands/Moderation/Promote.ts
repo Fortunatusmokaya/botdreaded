@@ -23,7 +23,7 @@ export default class Command extends BaseCommand {
 				if (M.quoted?.sender) M.mentioned.push(M.quoted.sender);
 				if (!M.mentioned.length)
 					return void M.reply(
-						`Tag the users you want to ${this.config.command}`
+						`So you want me to ${this.config.command} air💔? Tag a user then.`
 					);
         M.mentioned.forEach(async (user) => {
             const usr = this.client.contacts[user]
