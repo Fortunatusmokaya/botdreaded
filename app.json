@@ -1,5 +1,5 @@
 {
-  "name": "DREADED2",
+  "name": "DREADED1",
   "description": "A WhatsApp Bot With Rich Anime Features.",
   "keywords": [
       "bot",
@@ -11,8 +11,8 @@
       "whatsapp-sticker-bot",
       "whatsapp-botto"
   ],
-  "website": "https://github.com/Fortunatusmokaya/DREADED2_public#readme",
-  "repository": "https://github.com/Fortunatusmokaya/DREADED2.git",
+  "website": "https://github.com/Fortunatusmokaya/DREADED1_public#readme",
+  "repository": "https://github.com/Fortunatusmokaya/DREADED1.git",
   "logo": "https://www.digitalartsonline.co.uk/cmsdata/slideshow/3441290/6.jpg",
   "success_url": "/",
   "env": {
