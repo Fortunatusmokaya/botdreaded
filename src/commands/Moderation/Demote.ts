@@ -26,7 +26,7 @@ export default class Command extends BaseCommand {
             if (!M.groupMetadata?.admins?.includes(user)) M.reply(`Drugs at such a young age? I have Skipped *${username}* as they're not an admin`)
             else if (user !== this.client.user.jid) {
                 await this.client.groupDemoteAdmin(M.from, [user])
-                M.reply(` *${username}* is now a member 😂, so sad`)
+                M.reply(` *${username}* is no longer an Admin 😂, so sad`)
             }
         })
     }
