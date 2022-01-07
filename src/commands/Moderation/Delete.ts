@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
         if (!M?.quoted?.message) return void M.reply('Quote the message you want to delete')
         if (M.quoted.sender !== this.client.user.jid)
 					return void M.reply(
-						`Do you want me to delete the message of a random member?`
+						`I only delete messages I sent, dumb asf`
 					);
         await this.client.deleteMessage(M.from, {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
