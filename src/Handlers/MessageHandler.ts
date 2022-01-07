@@ -92,7 +92,7 @@ export default class MessageHandler {
 			);
 			if (!command)
 				return void M.reply(
-					`No command found! Use commands from *${this.client.config.prefix}help* only.`
+					`No such command found! Use commands from *${this.client.config.prefix}help* only.`
 				);
 			const user = await this.client.getUser(M.sender.jid);
 			if (user.ban) return void M.reply("You're Banned from using the bot commands. Maybe contact wa.me/+254114018035 for help.");
@@ -106,15 +106,15 @@ export default class MessageHandler {
 					}`
 				);
 			if (!command.config?.dm && M.chat === "dm")
-				return void M.reply("This commands can only be used in groups, get out of my dm before you are banned!");
+				return void M.reply("This commands can only be used in groups, get out of my DM now!");
 			if (
 				command.config?.modsOnly &&
 				!this.client.config.mods?.includes(M.sender.jid)
 			) {
-				return void M.reply(`Command can only be used by my DEVELOPER.`);
+				return void M.reply(`Command can only be used by my DEVELOPER and OWNER.`);
 			}
 			if (command.config?.adminOnly && !M.sender.isAdmin)
-				return void M.reply(`You just used an ADMIN-ONLY command, No response! Only ADMINS can execute the command!`);
+				return void M.reply(`You are NOT an ADMIN, You just made noise!`);
 			try {
 				await command.run(M, this.parseArgs(args));
 				if (command.config.baseXp) {
