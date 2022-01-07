@@ -38,7 +38,7 @@ export default class Command extends BaseCommand {
                     M.reply(`Mmmmh, say something...`)
                 })
         } else {
-            M.reply(`Chat Bot Url not set.`)
+            M.reply(`My brain not connected yet by my developer.`)
         }
     }
 }
