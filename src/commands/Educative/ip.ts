@@ -16,7 +16,7 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        if (!joined) return void M.reply('Do you want me to give the info of an unknown ip, Baka!')
+        if (!joined) return void M.reply('Do you want me to give the info of an unknown ip, Dumb!')
         const chitoge = joined.trim()
         await axios.get(`http://docs-jojo.herokuapp.com/api/ip_geolocation?ip=${chitoge}`)
         .then((response) => {
