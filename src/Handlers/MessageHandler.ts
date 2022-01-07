@@ -95,13 +95,13 @@ export default class MessageHandler {
 					`No such command found! Use commands from *${this.client.config.prefix}help* only.`
 				);
 			const user = await this.client.getUser(M.sender.jid);
-			if (user.ban) return void M.reply("You're Banned from using the bot commands. Maybe contact wa.me/+254114018035 for help.");
+			if (user.ban) return void M.reply("Why did you get banned from using commands? Maybe contact wa.me/+254114018035 for help.");
 			const state = await this.client.DB.disabledcommands.findOne({
 				command: command.config.command,
 			});
 			if (state)
 				return void M.reply(
-					`MASTER  disabled this command for certain reasons${
+					`Why is this command disabled? I cannot help at the moment${
 						state.reason ? ` for ${state.reason}` : ""
 					}`
 				);
@@ -111,10 +111,10 @@ export default class MessageHandler {
 				command.config?.modsOnly &&
 				!this.client.config.mods?.includes(M.sender.jid)
 			) {
-				return void M.reply(`Command can only be used by my DEVELOPER and OWNER.`);
+				return void M.reply(`Command can only be used by my *OWNER*.`);
 			}
 			if (command.config?.adminOnly && !M.sender.isAdmin)
-				return void M.reply(`You are NOT an ADMIN, You just made noise!`);
+				return void M.reply(`You are NOT an ADMIN, You literally made noise!`);
 			try {
 				await command.run(M, this.parseArgs(args));
 				if (command.config.baseXp) {
