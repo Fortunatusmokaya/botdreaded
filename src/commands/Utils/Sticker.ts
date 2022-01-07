@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
         else if (M.WAMessage.message?.videoMessage)
             // return void M.reply(`*Gif/Video to Sticker* feature is currently unavailable.\nYou can still use Image to Sticker though!!`)
             buffer = await this.client.downloadMediaMessage(M.WAMessage)
-        if (!buffer) return void M.reply(`You didn't provide any Image/Video to convert`)
+        if (!buffer) return void M.reply(`You expect me to make stickers out of thin air?`)
 
         const getQuality = (): number => {
             const qualityFlag = parsedArgs.joined.match(/--(\d+)/g) || ''
