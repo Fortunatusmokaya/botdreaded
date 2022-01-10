@@ -17,8 +17,8 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        if (!(M.groupMetadata?.mods.split('@')[0] === M.sender.jid.split('@')[0]))
-            return void M.reply('Only the *BOT OWNER* can use this command')
+        if (!(M.groupMetadata?.admins.split('@')[0] === M.sender.jid.split('@')[0]))
+            return void M.reply('Only the group admins can use this command, otherwise its unadvisable to use it')
         if (!M.groupMetadata?.admins?.includes(this.client.user.jid))
             return void M.reply("I NEED *ADMIN RIGHTS* TO DO THAT!")
         if (!this.purgeSet.has(M.groupMetadata?.id || '')) {
