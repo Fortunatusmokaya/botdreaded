@@ -26,7 +26,7 @@ export default class Command extends BaseCommand {
         MessageType.image,
                     undefined,
                     undefined,
-                    `*Fortunne*: *Lol Dreaded Bot, Written in Typescript and fully Modular whatsapp bot on development by Fortunne mokaya, Still a learner venturing into computer languages and technology, upcoming doctor and nurse as well 💕*\n *Antisocial Sociopath, introvert maybe as well, Am not good with people, I do not interact with people, I hate them lol,,, Phobic,,*`,
+                    `*Fortunne*: *Lol Dreaded Bot, Written in Typescript and fully Modular whatsapp bot in modification by Fortunne mokaya, Still a learner venturing into computer languages and technology, upcoming doctor and nurse as well 💕*\n *Antisocial Sociopath, introvert maybe as well, Am not good with people, I do not interact with people, I hate them lol,,, Phobic,,*`,
                     undefined
                 ).catch((reason: any) =>
             M.reply(`✖ An error occurred. Please try again later.`))
