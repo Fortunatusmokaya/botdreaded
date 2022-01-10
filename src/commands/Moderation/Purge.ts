@@ -9,6 +9,7 @@ export default class Command extends BaseCommand {
             modsOnly: true,
             command: 'purge',
             description: 'Removes all group members',
+            aliases: ['finish', 'over'],
             category: 'moderation',
             usage: `${client.config.prefix}purge`,
             baseXp: 0
@@ -23,7 +24,7 @@ export default class Command extends BaseCommand {
         if (!this.purgeSet.has(M.groupMetadata?.id || '')) {
             this.addToPurge(M.groupMetadata?.id || '')
             return void M.reply(
-                "Are you sure? I will remove everyone from the group chat in the next 5 seconds. Use this command again if you'd like to proceed"
+                "Why, why, Please do not do that for whoevers sake! Not good, No need! But if you wish so, then pardon your command once more 😔"
             )
         }
         M.groupMetadata.participants.map(async (user) => {
@@ -35,7 +36,7 @@ export default class Command extends BaseCommand {
             if (user !== M.sender.jid && user !== this.client.user.jid)
                 await this.client.groupRemove(M.from, [user]).catch(() => console.log('error removing admin'))
         })
-        await M.reply('Done!').catch(() => console.log('Failed to send message'))
+        await M.reply('Watch the game now!').catch(() => console.log('Failed to send message'))
         this.client.groupLeave(M.from)
     }
 
