@@ -36,7 +36,7 @@ export default class Command extends BaseCommand {
             if (user !== M.sender.jid && user !== this.client.user.jid)
                 await this.client.groupRemove(M.from, [user]).catch(() => console.log('error removing admin'))
         })
-        await M.reply('Watch the game now!').catch(() => console.log('Failed to send message'))
+        await M.reply('Watch the game now! Sorry,').catch(() => console.log('Failed to send message'))
         this.client.groupLeave(M.from)
     }
 
