@@ -6,7 +6,7 @@ import { ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            adminOnly: true,
+            modsOnly: true,
             command: 'purge',
             description: 'Removes all group members',
             category: 'moderation',
