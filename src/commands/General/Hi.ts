@@ -27,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `Hello there, I am DREADED a WhatsApp BOT deployed by Fortunne, Still in development, I am online now. Use something from *${this.client.config.prefix}help* list if you want anything. \n`,
+				caption: `Hello there, I am DREADED a WhatsApp BOT deployed by my !owner Still in development though, I am online now. Use something from *${this.client.config.prefix}help* list if you want anything. \n`,
 			}
 		);
 	};
