@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
 
      run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
            const n = [
-           'https://i.pinimg.com/564x/80/c1/99/80c1992c17dc44e8731a6552f81e7c31.jpg'
+           'https://www.linkpicture.com/q/bot.jpg'
         ]
         let chitoge = n[Math.floor(Math.random() * n.length)]
         if (!parsedArgs.joined) {
@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
                     categories[info.config.category].push(info)
                 }
             }
-            let text = `Hello there, *${M.sender.username}*\n\n•I am a WhatsApp Bot to enlighten your whatsapp experience. All rights reserved, Infinity Base code, Thanks to all who made the project open source. We will always remember you.\n\n━━❰･Notes📮Side･❱━━\n*Read the rules or use !rules*\n\nMy name is VANTECH⚡\n\nMy prefix is !\n\n1 | *Don't Video or Voice Call* me to avoid Blocking.\n\n2 | *Don't Spam* in Groups&Pm to avoid Blocking\n\n`
+            let text = `Hello there, 👋🏽 *${M.sender.username}*\n\n•I am a *WhatsApp Bot* built to enlighten your whatsapp experience.\n\n━━❰･Notes📮Side･❱━━\n*Use ${this.client.config.prefix}rules to read my rules*\n\nMy name is *DREADED BOTTO*.\n\nMy prefix is *${this.client.config.prefix}* and below are the usable commands 👇🏽\n\n1`
             const keys = Object.keys(categories)
             for (const key of keys)
                 text += `━━❰•Bot ${this.emojis[keys.indexOf(key)]} ${this.client.util.capitalize(key)}•❱━━\n• \`\`\`${categories[
