@@ -48,7 +48,7 @@ export default class Command extends BaseCommand {
 			],
 			undefined,
 			undefined,
-			"🌟 Here you go."
+			"💎 By Dreaded Botto."
 		);
 	};
 }
