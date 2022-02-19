@@ -22,8 +22,8 @@ export default class Command extends BaseCommand {
         const command = this.handler.commands.get(key) || this.handler.aliases.get(key)
         if (!command) return void (await M.reply(`No command found`))
         if (!(await this.client.DB.disabledcommands.findOne({ command: command.config.command })))
-            return void M.reply(`MASTER, ${this.client.util.capitalize(command.config.command)} is already enabled`)
+            return void M.reply(`Mmmh, ${this.client.util.capitalize(command.config.command)} is already enabled`)
         await this.client.DB.disabledcommands.deleteOne({ command: command.config.command })
-        await M.reply(`MASTER,*${this.client.util.capitalize(command.config.command)}* is now Enabled`)
+        await M.reply(`*${this.client.util.capitalize(command.config.command)}* is now Enabled`)
     }
 }
