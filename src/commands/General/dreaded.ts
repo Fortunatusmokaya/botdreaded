@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
   run = async (M: ISimplifiedMessage): Promise<void> => {
     await this.client.sendMessage(
       M.sender.jid,
-      ` 💎 Dreaded WhatsApp Bot 💎\n\n *Description: Maintained fork of void, The bot's source code being open and public, anybody can use this link to fork and deploy their own dreaded botto* \n\n 💎*URL-https://github.com/Fortunatusmokaya/DREADED* \n\n 🎂*DEPLOY GUIDE: https://github.com/Fortunatusmokaya/Dreaded-Guides* \n`,
+      ` 💎 Dreaded WhatsApp Bot 💎\n\n *Description: Maintained fork of void, The bot's source code being open and public, anybody can use this link to fork and deploy their own dreaded botto* \n\n 💎*URL-https://github.com/Fortunatusmokaya/botdreaded* \n\n 🎂*DEPLOY GUIDE: https://github.com/Fortunatusmokaya/Dreaded-Guides* \n`,
 
       MessageType.text
     );
