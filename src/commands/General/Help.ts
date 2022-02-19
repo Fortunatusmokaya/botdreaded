@@ -137,11 +137,6 @@ export default class Command extends BaseCommand {
         { title: "thighs", rowId: "rowid2" },
         { title: "seggs", rowId: "rowid2" },
       ];
-      const characters = [
-        { title: "claim", rowId: "rowid1" },
-        { title: "gallery", rowId: "rowid2" },
-        { title: "schara", rowId: "rowid2" },
-      ];
       const utils = [
         { title: "blur", rowId: "rowid1" },
         { title: "circle", rowId: "rowid2" },
@@ -215,7 +210,7 @@ export default class Command extends BaseCommand {
         listType: number;
       }
       const button: any = {
-        buttonText: "Command List",
+        buttonText: "Tap Here",
         footerText: "💎 Dreaded 💎",
         description: `${text} 📝 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*`,
         sections: sections,
