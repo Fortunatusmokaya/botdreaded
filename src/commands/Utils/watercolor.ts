@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
 		super(client, handler, {
 			command: "watercolor",
 			description: `Get text image`,
-			category: "creation",
+			category: "utils",
 			usage: `${client.config.prefix}watercolor`,
 			baseXp: 50,
 		});
@@ -35,7 +35,7 @@ export default class Command extends BaseCommand {
 					MessageType.image,
 					undefined,
 					undefined,
-					`🌟 Here you go.\n`,
+					`💎 By Dreaded Botto.\n`,
 					undefined
 				).catch((e) => {
 					console.log(
