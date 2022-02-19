@@ -1,5 +1,5 @@
 {
-  "name": "VANTECH",
+  "name": "DREADED BOTTO",
   "description": "A WhatsApp Bot With Rich Anime Features.",
   "keywords": [
       "bot",
@@ -11,8 +11,8 @@
       "whatsapp-sticker-bot",
       "whatsapp-botto"
   ],
-  "website": "https://github.com/Fortunatusmokaya/DREADED1_public#readme",
-  "repository": "https://github.com/vantech254/DREADED1.git",
+  "website": "https://github.com/Fortunatusmokaya/botdreaded_public#readme",
+  "repository": "https://github.com/Fortunatusmokaya/botdreaded.git",
   "logo": "https://www.digitalartsonline.co.uk/cmsdata/slideshow/3441290/6.jpg",
   "success_url": "/",
   "env": {
