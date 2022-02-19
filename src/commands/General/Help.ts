@@ -91,10 +91,10 @@ export default class Command extends BaseCommand {
         { title: "mods", rowId: "rowid2" },
         { title: "profile", rowId: "rowid2" },
         { title: "exp", rowId: "rowid2" },
-        { title: "leaderboard", rowId: "rowid2" },
         { title: "rank", rowId: "rowid2" },
         { title: "info", rowId: "rowid2" },
         { title: "dreaded", rowId: "rowid2" },
+        { title: "amazon", rowId: "rowid2" },
       ];
       const media = [
         { title: "karaoke", rowId: "rowid1" },
