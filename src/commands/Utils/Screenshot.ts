@@ -25,7 +25,7 @@ export default class Command extends BaseCommand {
         MessageType.image,
                     undefined,
                     undefined,
-                    `🌟 Here you go.\n`,
+                    "💎 By Dreaded Botto.\n",
                     undefined
                 ).catch((reason: any) =>
             M.reply(`✖ An error occurred. Please try again later. ${reason}`))
