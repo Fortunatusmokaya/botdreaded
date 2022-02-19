@@ -94,6 +94,7 @@ export default class Command extends BaseCommand {
         { title: "leaderboard", rowId: "rowid2" },
         { title: "rank", rowId: "rowid2" },
         { title: "info", rowId: "rowid2" },
+        { title: "dreaded", rowId: "rowid2" },
       ];
       const media = [
         { title: "karaoke", rowId: "rowid1" },
