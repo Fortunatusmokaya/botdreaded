@@ -14,7 +14,7 @@ export default class Command extends BaseCommand {
 			command: "mgalaxy",
 			description: `Get text image`,
 			aliases: ["mgalaxy"],
-			category: "creation",
+			category: "utils",
 			usage: `${client.config.prefix}xgalaxy`,
 			baseXp: 50,
 		});
@@ -36,7 +36,7 @@ export default class Command extends BaseCommand {
 					MessageType.image,
 					undefined,
 					undefined,
-					`🌟 Here you go.\n`,
+					`💎 By Dreaded Botto.\n`,
 					undefined
 				).catch((e) => {
 					console.log(
