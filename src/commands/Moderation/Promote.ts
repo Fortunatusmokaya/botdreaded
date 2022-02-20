@@ -18,20 +18,20 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage): Promise<void> => {
         if (!M.groupMetadata?.admins?.includes(this.client.user.jid))
 					return void M.reply(
-						`How can I promote someone without being an admin?`
+						`Make me *ADMIN* first`
 					);
 				if (M.quoted?.sender) M.mentioned.push(M.quoted.sender);
 				if (!M.mentioned.length)
 					return void M.reply(
-						`So you want me to ${this.config.command} air💔? Tag a user then.`
+						`Who should I *${this.config.command}*? Tag or mention someone.`
 					);
         M.mentioned.forEach(async (user) => {
             const usr = this.client.contacts[user]
             const username = usr.notify || usr.vname || usr.name || user.split('@')[0]
-            if (M.groupMetadata?.admins?.includes(user)) M.reply(`Don't be a fool, I have Skipped *${username}* as they're already an admin`)
+            if (M.groupMetadata?.admins?.includes(user)) M.reply(`*${username}* is already an *ADMIN*. What did you mean?`)
             else {
                 await this.client.groupMakeAdmin(M.from, [user])
-                M.reply(`👑 *${username}* is now an ADMIN`)
+                M.reply(`👑 *${username}* is now an *ADMIN*`)
             }
         })
     }
