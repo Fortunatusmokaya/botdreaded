@@ -8,6 +8,7 @@ export default class Command extends BaseCommand {
         super(client, handler, {
             adminOnly: true,
             command: 'demote',
+             aliases: ['dm'],
             description: 'demotes the mentioned users',
             category: 'moderation',
             usage: `${client.config.prefix}demote [mention | @tag]`,
@@ -17,16 +18,16 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
         if (!M.groupMetadata?.admins?.includes(this.client.user.jid))
-            return void M.reply(`How can I demote someone without being an admin?`)
+            return void M.reply(`Make me *ADMIN* first`)
         if (M.quoted?.sender) M.mentioned.push(M.quoted.sender)
-        if (!M.mentioned.length) return void M.reply(`Should I ${this.config.command} air💔?`)
+        if (!M.mentioned.length) return void M.reply(`Whom should I *${this.config.command}* now?`)
         M.mentioned.forEach(async (user) => {
             const usr = this.client.contacts[user]
             const username = usr.notify || usr.vname || usr.name || user.split('@')[0]
-            if (!M.groupMetadata?.admins?.includes(user)) M.reply(`Drugs at such a young age? I have Skipped *${username}* as they're not an admin`)
+            if (!M.groupMetadata?.admins?.includes(user)) M.reply(`*${username}* was not an admin before.`)
             else if (user !== this.client.user.jid) {
                 await this.client.groupDemoteAdmin(M.from, [user])
-                M.reply(` *${username}* is no longer an Admin 😂, so sad`)
+                M.reply(` *${username}* is *no longer* an *Admin* 👎🏿`)
             }
         })
     }
