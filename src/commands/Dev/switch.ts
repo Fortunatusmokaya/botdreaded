@@ -7,7 +7,7 @@ export default class Command extends BaseCommand {
   constructor(client: WAClient, handler: MessageHandler) {
     super(client, handler, {
       command: "test",
-      aliases: ['switch']
+      aliases: ['switch'],
       description: "Switches the bot",
       category: "dev",
       usage: `${client.config.prefix}switch <bot_name>`,
