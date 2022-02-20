@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
         })
     }
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
-        if (!joined) return void M.reply('Give me a song name, 😕!')
+        if (!joined) return void M.reply('Well, I need a song name!')
         const chitoge = joined.trim()
         await axios.get(`https://api.popcat.xyz/lyrics?song=${chitoge}`)
         .then((response) => {
