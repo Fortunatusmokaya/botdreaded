@@ -38,6 +38,7 @@ export interface IGroup {
 	events: boolean;
 	nsfw: boolean;
 	safe: boolean;
+	bot: string;
 	mod: boolean;
 	cmd: boolean;
 	invitelink: boolean;
