@@ -55,7 +55,7 @@
 - ✅ Automatically views WhatsApp statuses  
 - ✅ Simulates fake **typing** and **recording**  
 - ✅ Saves **view-once** images, videos, and audios by replying with:  
-  - `uhm`, `wow`, `nice`, or 🙂 *(case-insensitive)*  
+  - `uhm`, `wow`, `nice`, or the emoji 🙂   
 - ✅ Saves **status** by replying with `#save`  
 - ✅ Sends all media to your own number  
 - 🪶 Minimal and Lightweight — no menus, no bloated commands
