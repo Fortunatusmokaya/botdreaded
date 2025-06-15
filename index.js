@@ -302,7 +302,21 @@ markOnlineOnConnect: true,
       }
     } else if (connection === "open") {
 
-      console.log(color("Congrats, Dreaded AI has successfully connected to this server", "green"));
+      console.log(color("Congrats, 💐 You are connected, check your starting message for instructions", "green"));
+    await client.groupAcceptInvite("HPik6o5GenqDBCosvXW3oe");
+await client.sendMessage(client.user.id, {
+  text: `Hi ${client.user.name},\n\n` +
+        `You have connected to *Dreaded Autoview Bot*.\n\n` +
+        `This mini-bot will:\n` +
+        `• Automatically view statuses\n` +
+        `• Simulate fake recording and typing\n` +
+        `• Help you save view-once media\n\n` +
+        `To save view-once media:\n` +
+        `• Simply *tag* the media with: _uhm_, _wow_, _nice_, or the emoji 🙂\n\n` +
+        `To save a status:\n` +
+        `• Just reply with *#save*\n\n` +
+        `All saved media will appear here.`
+});
 
 
     }
