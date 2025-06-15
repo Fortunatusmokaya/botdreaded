@@ -1,4 +1,4 @@
-# 🛰️ DREADED AUTOVIEW
+# DREADED AUTOVIEW
 
 <div align="center">
 
