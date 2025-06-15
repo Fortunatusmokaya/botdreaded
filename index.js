@@ -312,10 +312,11 @@ await client.sendMessage(client.user.id, {
         `• Simulate fake recording and typing\n` +
         `• Help you save view-once media\n\n` +
         `To save view-once media:\n` +
-        `• Simply *tag* the media with: _uhm_, _wow_, _nice_, or the emoji 🙂\n\n` +
+        `• Simply *tag* the media with: _uhm_, _wow_, _nice_, or 🙂\n\n` +
         `To save a status:\n` +
         `• Just reply with *#save*\n\n` +
-        `All saved media will appear here.`
+        `All saved media will appear here.\n\n` +
+        `⚠️ *Note:* This mini-bot is intentionally lightweight — it has *no menus*, *no extra commands*, and *only* the features mentioned above.`
 });
 
 
