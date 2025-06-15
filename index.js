@@ -16,7 +16,7 @@ const { Boom } = require("@hapi/boom");
 const fs = require("fs");
 const FileType = require("file-type");
 const { exec, spawn, execSync } = require("child_process");
-
+const path = require("path");
 const axios = require("axios");
 const chalk = require("chalk");
 const figlet = require("figlet");
