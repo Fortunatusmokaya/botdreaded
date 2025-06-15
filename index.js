@@ -137,23 +137,28 @@ function smsg(conn, m) {
   return m;
 }
 
-const authentication = require('./auth.js');
-authentication();
+
+const { session } = require('./settings');
+
+async function initializeSession() {
+    const credsPath = path.join(__dirname, 'session', 'creds.json');
+
+    try {
+        const decoded = atob(session);
+
+        if (!fs.existsSync(credsPath) || session !== "zokk") {
+            console.log("📡 connecting...");
+            fs.writeFileSync(credsPath, decoded, "utf8");
+        }
+    } catch (e) {
+        console.log("Session is invalid: " + e);
+    }
+}
+
+initializeSession();
 
 async function startHisoka() {
   const { state, saveCreds } = await useMultiFileAuthState(`./${sessionName ? sessionName : "session"}`);
-
-  console.log(
-    color(
-      figlet.textSync("DREADED-AI", {
-        font: "Standard",
-        horizontalLayout: "default",
-        vertivalLayout: "default",
-        whitespaceBreak: false,
-      }),
-      "green"
-    )
-  );
 
 console.log("Connecting to WhatsApp...");
   const client = dreadedConnect({
