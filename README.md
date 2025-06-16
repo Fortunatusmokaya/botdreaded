@@ -35,7 +35,7 @@
 ## ☁️ DEPLOYMENT
 
 <p align="center">
-  🚀 If you're unable to deploy to Heroku, you can use our custom hosting platform <a href="https://hosting.dreaded.site" target="_blank"><strong>HERE</strong></a>.
+  🚀 If you're unable to deploy to Heroku, you can use our custom hosting platform <a href="https://minibothost.dreaded.site" target="_blank"><strong>HERE</strong></a>.
 </p>
 
 <p align="center">
